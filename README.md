@@ -2,7 +2,7 @@
 
 ## 地月模拟通信
 
-![地月模拟通信](http://download.kezhi.tech/img/20200417132254.png)
+![地月模拟通信](/images/20200417132254.png)
 
 编写三个函数分别模拟发送端，通道，和接收端：
 
@@ -14,34 +14,10 @@
 
 运行截图：
 
-![image-20200417141743542](http://download.kezhi.tech/img/20200417141745.png)
+![image-20200417141743542](/images/20200417141745.png)
 
 ## 通信时长统计
 
-![传输失败](http://download.kezhi.tech/img/20200417133722.png)
+![传输失败](/images/20200417133722.png)
 
 由上图可以看出，通信失败一共有三种情形。使用循环对于发送信息进行模拟，如果三种情况均为出现则循环变量+1，总时长+一次通信时常；否则循环变量不变，总时长+一次通信时常。
-
-选取几种情况下的通信时常，在其中两个概率不变时，改变一个事件出现的概率得到的结果如下：
-
-> 其余两个因素产生概率均为0.01 0.05 0.1，变量变化区域为0:0.01:0.99
-
-<table>
-    <tr>
-        <td><center><img src="http://download.kezhi.tech/img/20200417140611.png">p1</center></td>
-        <td><center><img src="http://download.kezhi.tech/img/20200417140433.png">p2</center></td>
-        <td><center><img src="http://download.kezhi.tech/img/20200417140637.png">p3</center></td>
-    </tr>
-</table>
-
-可以看出在0.8之后的变化几乎为直线上升，因此将变量范围改为0:0.01:0.8
-
-> 其余两个因素产生概率为0.01,0.05,0.1，变量变化区域为0:0.01:0.8
-
-<table>
-    <tr>
-        <td><center><img src="http://download.kezhi.tech/img/20200417140757.png">p1</center></td>
-        <td><center><img src="http://download.kezhi.tech/img/20200417140731.png">p2</center></td>
-        <td><center><img src="http://download.kezhi.tech/img/20200417140827.png">p3</center></td>
-    </tr>
-</table>
